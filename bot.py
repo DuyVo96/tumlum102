@@ -24,13 +24,13 @@ def scrape_user_followers(username):
     return followers_scraped
 
 
-friends = scrape_user_followers('ShengMo0x')
+scrape_user_followers('KRAM_eth')
+# print(len(followers_scraped))
 
-for i in range(len(friends)):
-    # screen_name = api.get_user(user_id=friends[i]).screen_name
-    followers_list.append([i, api.get_user(user_id=friends[i]).screen_name])
-    # print(i, screen_name)
+# for i in range(len(followers_scraped)):
+#     followers_list.append(
+#         [i, api.get_user(user_id=followers_scraped[i]).screen_name])
 
-df = pd.DataFrame(followers_list, columns=["Id", "Name"
-                                           ])
-df.to_csv("data.csv", index=False)
+# df = pd.DataFrame(followers_list, columns=["Id", "Name"
+#                                            ])
+# df.to_csv("data.csv", index=False)
